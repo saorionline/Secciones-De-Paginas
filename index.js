@@ -8,11 +8,31 @@ app.get('/', (req, res) => {
 
 app.get('/questions',(req, res) => {
   console.log('Mis Preguntas')
-  res.json({
+  res.json([{
     title: 'Health Detector',
-    id: 1,
-  });
+    text: 'Physical and mental Well-being',
+  },
+  {
+    title: 'Weight Loss',
+    text: 'Diets and Plans',
+  }
+  ]);
 });
+
+app.get('/questions/:id', (req, res) => {
+  const {id} = req.params;
+  res.json({
+    id,
+    title: 'Diet and Plans',
+    text: 'Weight Loss'
+  });
+})
+
+app.get('/categories/:categoryId/questions/:questionId', (req,res) => {
+  const { categoryId, questionId } = req.params;
+  res.json
+
+})
 
 app.listen(port, () => {
   console.log('Mi port' +  port);
