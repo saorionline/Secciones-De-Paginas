@@ -28,6 +28,18 @@ app.get('/questions/:id', (req, res) => {
   });
 })
 
+app.get('/users', (req, res) => {
+  const { limit, offset } = req.query;
+  if ( limit && offset ) {
+    res.json({
+      limit, 
+      offset
+    });
+  } else {
+  res.send('No params here');
+  }
+})
+
 app.get('/categories/:categoryId/questions/:questionId', (req,res) => {
   const { categoryId, questionId } = req.params;
   res.json
