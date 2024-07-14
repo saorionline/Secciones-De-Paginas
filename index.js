@@ -1,9 +1,24 @@
+const faker = require('faker');
 const express = require('express');
 const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
   res.send('Hola mi server es Express');
+})
+
+app.get('/products', (req, res) => {
+  const products = [];
+  const { size } = req.query;
+  const limit = size || 10; 
+  for (let index = 0; index < 10; index++){
+    products.push({
+      name: faker.commerce.productName(),
+      price: parseInt(faker.commerce.price(min,max),10),
+      image: faker.image.imageUrl(width,height),
+    });
+  }
+  res.json(products);
 })
 
 app.get('/questions',(req, res) => {
