@@ -9,6 +9,10 @@ const questions_library = [
 {id: 5, title: 'Mental Health', text:"Managing stress, and improving mental well-being", completed: false},
 {id: 6, title: 'Sleep Well', text:"Improve sleep habits", completed: false}]
 
+router.get('/', (req, res) => {
+  res.json(questions_library);
+});
+
 router.get('/:id',(req, res) => {
   const { id } = req.params;
   const question = questions_library.find(question => question.id === parseInt(id));
