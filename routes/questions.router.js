@@ -16,4 +16,10 @@ router.get('/:id',(req, res) => {
   res.json( question );
 });
 
+router.delete('/:id', async(req, res) => {
+  const { id } = req.params;
+  const rta = await questionService.detele(id);
+  res.json (rta );
+});
+
 module.exports = router;

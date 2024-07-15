@@ -17,6 +17,14 @@ class QuestionService {
         return this.questions.find( question => question.id === parseInt(id, 10));
     }
     update(id, updates) {}
+    async delete(id) {
+        const index = this.questions.findIndex ( question => question.id === parseInt(id, 10));
+        if( index === -1 ) {
+            throw new Error ('Question not found');
+        }
+        this.questions.splice(index, 1);
+        return { id }
+    }
 }
       
 const questionService = new QuestionService();
