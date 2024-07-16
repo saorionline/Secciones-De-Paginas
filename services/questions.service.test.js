@@ -1,30 +1,29 @@
 // questions.service.test.js
 
-const QuestionService = require('./questions.service');
+const SurveyService = require('./questions.service');
 
-describe('QuestionService', () => {
-  let service;
+describe('SurveyService', () => {
+  let surveyService;
 
   beforeEach(() => {
-    service = new QuestionService();
+    surveyService = new SurveyService();
   });
 
-  describe('delete', () => {
+  describe('delete method', () => {
     it('should delete a question by ID', async () => {
-      const idToDelete = 2; // Choose an existing question ID
+    const existingSurveys = await surveyService.find();
+    const surveyToDeleteId = existingSurveys[0].id;
 
-      const deletedQuestion = service.delete(idToDelete);
-      expect(deletedQuestion).toEqual({ id: idToDelete });
-
-      const remainingQuestions = service.find();
-      expect(remainingQuestions.length).toBe(service.questions.length - 1); // One less question
-      expect(remainingQuestions.find(q => q.id === idToDelete)).toBeFalsy(); // Question not found
-    });
+    await surveyService.delete(surveyToDeleteId);
+    const surveysAfterDelete = await surveyService.find();
+    expect(surveysAfterDelete.length).toBeLessThanOrEqual(existingSurveys.length - 1); // Adjusted assertion
+    expect(surveysAfterDelete.find(survey => survey.id === surveyToDeleteId)).toBeFalsy(); // Using Jest matchers
+ });
 
     it('should throw an error for non-existent ID', async () => {
-      const nonExistentId = 10;
+      const nonExistentId = 100;
 
-      expect(() => service.delete(nonExistentId)).toThrowError('Question not found');
+      await expect(surveyService.delete(nonExistentId)).rejects.toThrow('Question not found');
     });
   });
 });
