@@ -2,7 +2,7 @@ const express = require('express');
 const routerApi = require('./routes');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
-const Hero = require('./react-components/Hero.tsx'); // Replace with your component path
+const Hero = require('./src/react-components/Hero.tsx'); // Replace with your component path
 
 const app = express();
 const port = 3000;
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     </head>
     <body>
       <div id="root">${reactComponent}</div>
-      <script ></script> // Replace with actual path src="path/to/your/client-side-react-bundle.js"
+      <script src="/public/client-side-react-bundle.js"></script> // Replace with actual path src="path/to/your/client-side-react-bundle.js"
     </body>
     </html>
   `);
