@@ -2,12 +2,12 @@
   "name": "secciones-de-paginas",
   "version": "1.0.0",
   "description": "Desarrollando mi App desde el Back-End Server",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "build": "webpack",
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "lint": "eslint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "keywords": [
     "Express",

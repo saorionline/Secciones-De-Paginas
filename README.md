@@ -1,13 +1,13 @@
 # Secciones-De-Paginas
-Desarrollando mi App desde el Back-End Server
+Desarrollando mi App desde el Back-End Server, conectando con el Front-End Server
 
-# Basic exercises
+# Typescript Setup
 
-Get the array, and organize it in compartiments
+Rulebook, tell the TypeScript compiler how to handle code
 
-# Delete the first item in the array
+# Next Setup
 
-My information is stored locally, so my exercise is to see how to delete or modify the array.
+Regardless of whether you're using TypeScript or not. Acts as a central hub for customizing various aspects of Next.js application. Defines configuration of routing, build options, environment variables and webpack. Modular and Clean
 
 # Put and Patch 
 

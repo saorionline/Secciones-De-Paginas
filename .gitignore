@@ -36,10 +36,14 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+build
 build/Release
 
 # Dependency directories
 node_modules/
+/.pnp
+.pnp.js
+.yarn/install-state.gz
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -128,3 +132,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+.env*.local
+.vercel
+.tsbuildinfo
+next-env.d.ts
