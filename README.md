@@ -1,15 +1,15 @@
 # Secciones-De-Paginas
 Desarrollando mi App desde el Back-End Server, conectando con el Front-End Server
 
-# Typescript Setup
+## Typescript Setup
 
 Rulebook, tell the TypeScript compiler how to handle code
 
-# Next Setup
+## Next Setup
 
 Regardless of whether you're using TypeScript or not. Acts as a central hub for customizing various aspects of Next.js application. Defines configuration of routing, build options, environment variables and webpack. Modular and Clean
 
-# Tailwind Setup
+## Tailwind Setup
 
 After creating the project, install peer dependencies and the paths of my templating files. 
 
