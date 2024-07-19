@@ -12,6 +12,11 @@ Regardless of whether you're using TypeScript or not. Acts as a central hub for 
 ## Tailwind Setup
 
 After creating the project, install peer dependencies and the paths of my templating files. 
+Install dependency
+
+```javascript
+npm install -D tailwindcss postcss autoprefixer next
+```
 
 ```javascript
 /** @type {import('tailwindcss').Config} */
