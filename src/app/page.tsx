@@ -1,14 +1,13 @@
-import styles from './page.module.css'
-import Features from '../components/Features.js';
-import CallToAction from '../components/Call-to-action.js';
-import Newsletter from '../components/Newsletter.js';
-import Stats from '../components/Stats.js';
-import Testimonials from '../components/Testimonials.js';
-import Blog from '../components/Blog.js';
-import Contact from '../components/Contact.js';
-import Team from '../components/Team.js';
-import Content from '../components/Content.js';
-import Logo from '../components/Logo.js';
+import Features from '../components/B-Features.js';
+import CallToAction from '../components/C-Call-to-action.js';
+import Newsletter from '../components/D-Newsletter.js';
+import Stats from '../components/E-Stats.js';
+import Testimonials from '../components/F-Testimonials.js';
+import Blog from '../components/G-Blog.js';
+import Contact from '../components/H-Contact.js';
+import Team from '../components/I-Team.js';
+import Content from '../components/J-Content.js';
+import Logo from '../components/K-Logo.js';
 
 export default function Home() {
   return (

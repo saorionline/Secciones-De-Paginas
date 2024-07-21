@@ -8,8 +8,12 @@ export default function Testimonials() {
           <figure className="mt-10">
             <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
               <p>
-                “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
-                molestiae. Numquam corrupti in laborum sed rerum et corporis.”
+                “Hola!
+
+                Gracias por preguntarnos sobre el sueño. Tienes razón, los cambios en la dieta y el estilo de vida pueden mejorar significativamente la calidad del sueño.
+
+                Para obtener recomendaciones específicas, sería útil comprender un poco mejor sus problemas de sueño. ¿Podrías decirme más sobre tu rutina?”
+
               </p>
             </blockquote>
             <figcaption className="mt-10">
@@ -19,11 +23,11 @@ export default function Testimonials() {
                 className="mx-auto h-10 w-10 rounded-full"
               />
               <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-                <div className="font-semibold text-gray-900">Judith Black</div>
+                <div className="font-semibold text-gray-900">Dr. Judith Black</div>
                 <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
                   <circle r={1} cx={1} cy={1} />
                 </svg>
-                <div className="text-gray-600">CEO of Workcation</div>
+                <div className="text-gray-600">Médica General</div>
               </div>
             </figcaption>
           </figure>
