@@ -38,7 +38,7 @@ export default function Features() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Descubre tu propio camino hacia el más alto y óptimo estado de salud.
-            Encuentra tu enfoque, para alcanzar esos objectivos que tu cuerpo necesita para sentirse mejor. 
+            Encuentra tu enfoque, para alcanzar esos objetivos que tu cuerpo necesita para sentirse mejor. 
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

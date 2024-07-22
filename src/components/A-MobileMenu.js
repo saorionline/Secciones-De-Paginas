@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
   { name: 'Medicina Interna', href: '#' },
   { name: 'Atención Centrada', href: '#' },
-  { name: 'Bien Escencial', href: '#' },
+  { name: 'Bien Esencial', href: '#' },
   { name: 'Armonía de la Salud', href: '#' },
 ]
 
