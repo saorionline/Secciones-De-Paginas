@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Bogart App',
-  description: 'Desde STEAM Bogotá al mundo',
+  description: 'STEAM Woman',
 }
 
 export default function RootLayout({
