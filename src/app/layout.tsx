@@ -7,8 +7,8 @@ import MobileMenu from '../components/A-MobileMenu.js'; // Assuming 'components'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Bogart App',
-  description: 'STEAM Woman',
+  title: 'Medical App',
+  description: 'Women´s Health',
 }
 
 export default function RootLayout({
@@ -19,8 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MobileMenu />
-        
+        <div className='relative isolate overflow-hidden bg-gray-200 py-16 sm:py-16 lg:py-8'>
+      <img
+              alt="Transistor"
+              src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+              width={158}
+              height={48}
+              className="mt-4 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            />
+        </div>
         {children}
       </body>
     </html>
