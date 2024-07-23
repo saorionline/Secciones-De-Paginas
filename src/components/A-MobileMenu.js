@@ -4,10 +4,10 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Medicina Interna', href: '#' },
-  { name: 'Atención Centrada', href: '#' },
-  { name: 'Bien Esencial', href: '#' },
-  { name: 'Armonía de la Salud', href: '#' },
+  { name: 'Medicina Interna', href: '/inner-care' },
+  { name: 'Atención Centrada', href: '/centered-care' },
+  { name: 'Bienestar Esencial', href: '/essential-wellbeing' },
+  { name: 'Armonía de la Salud', href: '/health-balance' },
 ]
 
 export default function MobileMenu() {
@@ -22,8 +22,8 @@ export default function MobileMenu() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Salud Interior</span>
               <img
-                alt=""
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt="Bear Logo"
+                src="/bear.png"
                 className="h-8 w-auto"
               />
             </a>
