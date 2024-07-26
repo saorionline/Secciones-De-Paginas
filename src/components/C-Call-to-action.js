@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Example() {
   return (
     <div className="bg-white">
@@ -38,7 +40,7 @@ export default function Example() {
             </div>
           </div>
           <div className="relative mt-16 h-80 lg:mt-8">
-            <img
+            <Image
               alt="App screenshot"
               src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg"
               width={1824}

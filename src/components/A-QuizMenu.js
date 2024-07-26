@@ -4,14 +4,14 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const navigation = [
-  { name: 'Medicina Interna', href: '/inner-care' },
-  { name: 'Atención Centrada', href: '/centered-care' },
-  { name: 'Bienestar Esencial', href: '/essential-wellbeing' },
-  { name: 'Armonía de la Salud', href: '/health-balance' },
+const policiesNav = [
+  { name: 'Políticas de Privacidad', href: '/quiz' },
+  { name: 'Términos y Condiciones', href: '/quiz' },
+  { name: 'Valor Comercial', href: '/quiz' },
+  { name: 'FAQ', href: '/quiz' },
 ]
 
-export default function MobileMenu() {
+export default function QuizMenu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -21,7 +21,7 @@ export default function MobileMenu() {
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Salud Interior</span>
+              <span className="sr-only">Quiz Salud Interior</span>
               <Image
                 alt="Bear Logo"
                 src="/bear.png"
@@ -29,7 +29,7 @@ export default function MobileMenu() {
               />
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex lg">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
@@ -39,20 +39,10 @@ export default function MobileMenu() {
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-                {item.name}
-              </a>
-            ))}
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-12 text-gray-900">
-              Iniciar Sesión <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+
+
         </nav>
-        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg">
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
@@ -76,7 +66,7 @@ export default function MobileMenu() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {policiesNav.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}

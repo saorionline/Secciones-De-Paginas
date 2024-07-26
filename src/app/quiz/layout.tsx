@@ -1,3 +1,5 @@
+import QuizMenu from '../../components/A-QuizMenu.js'
+
 export default function Layout({
     children,
 }:{
@@ -6,7 +8,7 @@ export default function Layout({
       {
         return (
             <main>
-              <nav>Navegación de Quiz</nav>
+              <QuizMenu/>
               
               {children}
             </main>
