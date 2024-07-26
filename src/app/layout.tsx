@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className='relative isolate overflow-hidden bg-gray-200 py-4 sm:py-6 lg:py-8'>
-          <img
+          <Image
               alt="Transistor"
               src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
               width={158}

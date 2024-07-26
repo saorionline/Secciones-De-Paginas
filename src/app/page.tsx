@@ -1,4 +1,4 @@
-import MobileMenu from '../components/A-MobileMenu.js'
+import MobileMenu from '../components/A-MobileMenu.tsx';
 import Hero from '../components/Ab-Hero.js';
 import Features from '../components/B-Features.js';
 import CallToAction from '../components/C-Call-to-action.js';
