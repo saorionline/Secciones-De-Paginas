@@ -2,7 +2,7 @@ import MobileMenu from '../../components/A-MobileMenu'
 import Blog from '../../components/G-Blog';
 import Newsletter from '../../components/D-Newsletter.js';
 import Stats from '../../components/E-Stats.js';
-import Testimonials from '../../components/F-Testimonials';
+import Testimonials, { Doctor, Specialty  } from '../../components/F-Testimonials';
 
 
 export default function InnerCare() {
@@ -84,11 +84,13 @@ export default function InnerCare() {
         <Testimonials 
         alt="Testimonial" 
         image1="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" 
-        image2= "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        image2= "/assets/doctor2.png"
         className1="mx-auto w-auto h-12"
         className2 ="mx-auto h-10 w-10 rounded-full"
         width = { 120 }
         height = { 80 } 
+        doctor={Doctor.JudithBlack}
+        specialization={Specialty.Psycologist}
         />
 
 

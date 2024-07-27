@@ -8,6 +8,16 @@ interface TestimonialsProps {
   className2: string
   width: number
   height: number
+  doctor: Doctor
+  specialization: Specialty
+}
+export enum Doctor {
+  JudithBlack = 'Dra. Judith Black',
+  JohnDoe = 'Dr. John Doe',
+}
+export enum Specialty {
+  Oncologist = 'Médico Oncólogo',
+  Psycologist = 'Médica Psicóloga',
 }
 
 export default function Testimonials({ 
@@ -17,7 +27,10 @@ export default function Testimonials({
   className1, 
   className2, 
   width, 
-  height }: TestimonialsProps) {
+  height,
+  doctor,
+  specialization,
+}: TestimonialsProps) {
     return (
       <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
@@ -48,11 +61,11 @@ export default function Testimonials({
                 height= {height}
               />
               <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-                <div className="font-semibold text-gray-900">Dra. Judith Black</div>
+                <div className="font-semibold text-gray-900">{doctor}</div>
                 <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
                   <circle r={1} cx={1} cy={1} />
                 </svg>
-                <div className="text-gray-600">Médica General</div>
+                <div className="text-gray-600">{specialization}</div>
               </div>
             </figcaption>
           </figure>

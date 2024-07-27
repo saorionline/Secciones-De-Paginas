@@ -1,4 +1,4 @@
-import MobileMenu from '../../components/A-MobileMenu.js'
+import MobileMenu from '../../components/A-MobileMenu'
 
 import Contact from '../../components/H-Contact.js';
 import Team from '../../components/I-Team.js';

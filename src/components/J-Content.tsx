@@ -1,11 +1,15 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 
-interface ContentProps {
+interface ImageProps {
   imageSrc: string;
   alt: string;
   width: string;
   height: string;
+}
+
+interface ContentProps {
+  
 }
 
 export default function Content({
