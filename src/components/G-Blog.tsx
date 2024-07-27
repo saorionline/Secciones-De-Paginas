@@ -1,16 +1,17 @@
 import Image from 'next/image'
 import React from 'react';
 
-interface PostAuthor {
+
+
+interface Author {
   name: string;
   role: string;
   href: string;
-  imageUrl: string;
-}
-
-interface PostCategory {
-  title: string;
-  href: string;
+  imagePath: string;
+  className: string;
+  alt: string;
+  width: number;
+  height: number;
 }
 
 interface Post {
@@ -20,17 +21,17 @@ interface Post {
   description: string;
   date: string;
   datetime: string;
-  category: PostCategory;
-  author: PostAuthor;
+  category: { title: string; href: string };
+  author: Author;
 }
 
 interface PostProps {
-  posts: Post[];
+  posts?: Post[];
 }
 
 
   
-export default function Blog({ posts }:PostProps) {
+const Blog: React.FC<PostProps> = ({ posts = [] }) => {
     return (
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -64,7 +65,13 @@ export default function Blog({ posts }:PostProps) {
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
                 </div>
                 <div className="relative mt-8 flex items-center gap-x-4">
-                  <Image alt="" src={post.author.imageUrl} className="h-12 w-auto rounded-full bg-gray-50" width={80} height={80}/>
+                  <Image 
+                    alt={post.author.alt}
+                    src={post.author.imagePath}
+                    className={post.author.className}
+                    width= {post.author.width}// Adjust as needed
+                    height={post.author.height} // Adjust as needed
+                    />
                   <div className="text-sm leading-6">
                     <p className="font-semibold text-gray-900">
                       <a href={post.author.href}>
@@ -83,3 +90,4 @@ export default function Blog({ posts }:PostProps) {
     )
   }
   
+export default Blog

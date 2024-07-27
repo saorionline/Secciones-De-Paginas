@@ -21,15 +21,19 @@ export default function InnerCare() {
       href: '#',
       description:
         'Herramientas de Google para diagnosticar debilidades y fortalezas en la salud. Provee herramientas de acceso global para informar a las pacientes sobre ciertos estados de la salud. Enfoque específico en la mujer y el papel de Google para mejorar con soluciones IA a la mano.',
-      date: 'Juli 22, 2024',
+      date: 'July 22, 2024',
       datetime: '2024-07-22',
       category: { title: 'Medicina Ginecológica', href: '#' },
       author: {
-        name: 'Mila Daza',
+        name: 'Leo Torres',
         role: 'Médica Ginecóloga',
-        href: '#',
-        imageUrl: 'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300',
-        }
+        href: '#',  
+        imagePath: '/assets/writer3.png',
+        alt: 'Writer',
+        className: 'mx-auto rounded-full',  
+        width: 50,
+        height: 50,
+      },
       },
     {
         id: 2,
@@ -41,11 +45,15 @@ export default function InnerCare() {
         datetime: '2020-03-16',
         category: { title: 'Salud Femenina', href: '#' },
         author: {
-          name: 'Mila Daza',
+          name: 'Manuela García',
           role: 'Médica Ginecóloga',
           href: '#',
-          imageUrl:
-            'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300',
+        
+          imagePath:'/assets/writer2.png',
+          alt: 'Writer',
+          className: 'mx-auto rounded-full',
+          width: 50,
+          height: 50,
         },
       },
       {
@@ -61,9 +69,12 @@ export default function InnerCare() {
           name: 'Mila Daza',
           role: 'Médica Ginecóloga',
           href: '#',
-          imageUrl:
-            'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300',
-        },
+          imagePath:'/assets/writer1.png',
+         className: 'rounded-full',      
+          width: 50,
+          height: 50,
+          alt: 'Writer',
+          },
       },
   ]}
       
