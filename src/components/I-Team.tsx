@@ -1,22 +1,17 @@
 import Image from 'next/image'
+import React from 'react'
 
-const people = [
-    {
-      name: 'Leslie Alexander',
-      role: 'Co-Founder / CEO',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-    {
-      name: 'Leslie Alexander',
-      role: 'Co-Founder / CEO',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-    // More people...
-  ]
+interface Profile {
+  name: string;
+  role: string;
+  imageSrc: {imagePath: string; width: number; height: number};
+}
+
+interface PeopleProps {
+  team_players?: Profile[];
+}
   
-  export default function Team() {
+export default function Team({ team_players = []}: PeopleProps) {
     return (
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
@@ -28,10 +23,16 @@ const people = [
             </p>
           </div>
           <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-            {people.map((person) => (
+            {team_players.map((person) => (
               <li key={person.name}>
                 <div className="flex items-center gap-x-6">
-                  <Image alt="" src={person.imageUrl} className="h-16 w-16 rounded-full" />
+                  <Image 
+                    alt="Profile Picture of the Woman in this Role Position" 
+                    src={person.imageSrc.imagePath} 
+                    width={person.imageSrc.width} 
+                    height={person.imageSrc.height} 
+                    className="rounded-full"
+                    />
                   <div>
                     <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
                     <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>

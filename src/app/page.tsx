@@ -1,9 +1,9 @@
 import MobileMenu from '../components/A-MobileMenu';
-import Hero from '../components/Ab-Hero.js';
-import Features from '../components/B-Features.js';
+import Hero from '../components/Ab-Hero';
+import Features from '../components/B-Features';
 import CallToAction from '../components/C-Call-to-action';
-import Newsletter from '../components/D-Newsletter.js';
-import Logo from '../components/K-Logo.js';
+import Newsletter from '../components/D-Newsletter';
+import Logo from '../components/K-Logo';
 import type { NextPage } from 'next';
 import React from 'react';
 import Image from 'react-image';

@@ -1,7 +1,7 @@
 import MobileMenu from '../../components/A-MobileMenu'
-import Team from '../../components/I-Team.js';
+import Team from '../../components/I-Team';
 import Content from '../../components/J-Content';
-import Hero from '../../components/Ab-Hero.js';
+import Hero from '../../components/Ab-Hero';
 
 export default function HealthBalance() {
   return (

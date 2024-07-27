@@ -1,7 +1,7 @@
 import MobileMenu from '../../components/A-MobileMenu'
 import Blog from '../../components/G-Blog';
-import Newsletter from '../../components/D-Newsletter.js';
-import Stats from '../../components/E-Stats.js';
+import Newsletter from '../../components/D-Newsletter';
+import Stats from '../../components/E-Stats';
 import Testimonials, { Doctor, Specialty  } from '../../components/F-Testimonials';
 
 
