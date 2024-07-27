@@ -1,13 +1,21 @@
-import { useState } from 'react';
+'use client'
+import  React, { useState } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
-interface
-  NavigationItem {
+interface NavigationItem {
     name: string;
     href: string;
   }
+
+interface MobileMenuProps {
+    imageSrc: string;
+    alt: string;
+    width: number;
+    height: number;
+}
+  
 
 const navigation: NavigationItem[] = [
   { name: 'Medicina Interna', href: '/inner-care' },
@@ -16,7 +24,15 @@ const navigation: NavigationItem[] = [
   { name: 'Armonía de la Salud', href: '/health-balance' },
 ];
 
-export default function MobileMenu(): React.FC {
+function renderNavigationItem ( item: NavigationItem ): JSX.Element {
+  return(
+    <a key= {item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+      (item.name)
+    </a>
+  )
+}
+
+const MobileMenu: React.FC<MobileMenuProps> = ({ imageSrc, alt, width, height }) => {  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -25,12 +41,18 @@ export default function MobileMenu(): React.FC {
       <header className="relative inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
+            {mobileMenuOpen && (
+              <ul>
+                {navigation.map((item) => renderNavigationItem(item))}
+              </ul>
+            )}
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Salud Interior</span>
               <Image
-                alt="Bear Logo"
-                src="/bear.png"
-                className="h-8 w-auto"
+                alt={alt}
+                src={imageSrc}
+                width= {width}
+                height= {height}
               />
             </a>
           </div>
@@ -45,11 +67,7 @@ export default function MobileMenu(): React.FC {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-                {item.name}
-              </a>
-            ))}
+   
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -107,3 +125,4 @@ export default function MobileMenu(): React.FC {
     </div>
   )
 }
+export default MobileMenu;
