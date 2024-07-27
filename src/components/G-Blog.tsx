@@ -1,59 +1,36 @@
 import Image from 'next/image'
+import React from 'react';
 
-const posts = [
-    {
-      id: 1,
-      title: 'IA para mejorar la asistencia médica',
-      href: '#',
-      description:
-        'Herramientas de Google para diagnosticar debilidades y fortalezas en la salud. Provee herramientas de acceso global para informar a las pacientes sobre ciertos estados de la salud. Enfoque específico en la mujer y el papel de Google para mejorar con soluciones IA a la mano.',
-      date: 'Juli 22, 2024',
-      datetime: '2024-07-22',
-      category: { title: 'Medicina Ginecológica', href: '#' },
-      author: {
-        name: 'Mila Daza',
-        role: 'Médica Ginecóloga',
-        href: '#',
-        imageUrl: 'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300',
-        }
-      },
-    {
-        id: 2,
-        title: 'Priorizando la Ginecología y Obstetricia',
-        href: '#',
-        description:
-          'Google Research y AI Innovation utilizan la tecnología y la innovación para potenciar la salud de las mujeres. La iniciativa de Google para mejorar el acceso y la calidad de la información. Impacto transformador de la IA en la atención sanitaria de las mujeres, especialmente en el acceso y la calidad.',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
-        category: { title: 'Salud Femenina', href: '#' },
-        author: {
-          name: 'Mila Daza',
-          role: 'Médica Ginecóloga',
-          href: '#',
-          imageUrl:
-            'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300',
-        },
-      },
-      {
-        id: 3,
-        title: 'Agilizando la Atención Médica',
-        href: '#',
-        description:
-          'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
-        category: { title: 'Salud Femenina', href: '#' },
-        author: {
-          name: 'Mila Daza',
-          role: 'Médica Ginecóloga',
-          href: '#',
-          imageUrl:
-            'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300',
-        },
-      },
-  ]
+interface PostAuthor {
+  name: string;
+  role: string;
+  href: string;
+  imageUrl: string;
+}
+
+interface PostCategory {
+  title: string;
+  href: string;
+}
+
+interface Post {
+  id: number;
+  title: string;
+  href: string;
+  description: string;
+  date: string;
+  datetime: string;
+  category: PostCategory;
+  author: PostAuthor;
+}
+
+interface PostProps {
+  posts: Post[];
+}
+
+
   
-  export default function Blog() {
+export default function Blog({ posts }:PostProps) {
     return (
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -87,7 +64,7 @@ const posts = [
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
                 </div>
                 <div className="relative mt-8 flex items-center gap-x-4">
-                  <Image alt="" src={post.author.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
+                  <Image alt="" src={post.author.imageUrl} className="h-12 w-auto rounded-full bg-gray-50" width={80} height={80}/>
                   <div className="text-sm leading-6">
                     <p className="font-semibold text-gray-900">
                       <a href={post.author.href}>

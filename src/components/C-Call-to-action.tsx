@@ -1,6 +1,14 @@
 import Image from 'next/image'
 
-export default function Example() {
+interface CallToActionProps {
+  imageSrc: string;
+  alt: string;
+  width: number;
+  height: number;
+  className: string;
+}
+
+const CallToAction: React.FC<CallToActionProps> = ({ imageSrc, alt, width, height, className}) => {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -41,11 +49,11 @@ export default function Example() {
           </div>
           <div className="relative mt-16 h-80 lg:mt-8">
             <Image
-              alt="App screenshot"
-              src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg"
-              width={1824}
-              height={1080}
-              className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              src={imageSrc}
+              alt={alt}
+              width={width}
+              height={height}
+              className= {className}
             />
           </div>
         </div>
@@ -53,3 +61,4 @@ export default function Example() {
     </div>
   )
 }
+export default CallToAction;

@@ -1,7 +1,7 @@
 import MobileMenu from '../components/A-MobileMenu';
 import Hero from '../components/Ab-Hero.js';
 import Features from '../components/B-Features.js';
-import CallToAction from '../components/C-Call-to-action.js';
+import CallToAction from '../components/C-Call-to-action';
 import Newsletter from '../components/D-Newsletter.js';
 import Logo from '../components/K-Logo.js';
 import type { NextPage } from 'next';
@@ -13,7 +13,7 @@ interface HomeProps {
   image: string;
 }
 
-const HomeMe: NextPage<HomeProps> = ({title}) => {
+const HomeMe: NextPage<HomeProps> = () => {
   return (
     <main >
       <MobileMenu 
@@ -24,11 +24,16 @@ const HomeMe: NextPage<HomeProps> = ({title}) => {
         />
         <Hero/>
         <Features />
-        <CallToAction />
+        <CallToAction 
+          alt="App screenshot"
+          imageSrc="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg"
+          width={1824}
+          height={1080}
+          className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+        />
         <Newsletter />
 
         <Logo/>
-     <h1 className="centered">@Bogota, Colombia. Saori {title}</h1>
     </main>
   )
 }

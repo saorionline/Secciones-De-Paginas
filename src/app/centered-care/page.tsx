@@ -1,13 +1,18 @@
-import MobileMenu from '../../components/A-MobileMenu.js'
+import MobileMenu from '../../components/A-MobileMenu'
 
-import Content from '../../components/J-Content.js';
+import Content from '../../components/J-Content';
 
-import Testimonials from '../../components/F-Testimonials.js';
+import Testimonials from '../../components/F-Testimonials';
 
 export default function HealthBalance() {
   return (
     <main >
-      <MobileMenu/>
+      <MobileMenu
+              imageSrc="/bear.png"
+              alt="Bear Logo"
+              width = { 80 }
+              height = { 80 }
+      />
         <Content/>
         <Testimonials/>
 

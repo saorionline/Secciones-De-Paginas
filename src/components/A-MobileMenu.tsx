@@ -27,7 +27,7 @@ const navigation: NavigationItem[] = [
 function renderNavigationItem ( item: NavigationItem ): JSX.Element {
   return(
     <a key= {item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-      (item.name)
+      {item.name}
     </a>
   )
 }
@@ -40,12 +40,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ imageSrc, alt, width, height })
     <div className="bg-white">
       <header className="relative inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
-          <div className="flex lg:flex-1">
-            {mobileMenuOpen && (
-              <ul>
-                {navigation.map((item) => renderNavigationItem(item))}
-              </ul>
-            )}
+          <div className="flex lg:flex-1">            
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Salud Interior</span>
               <Image
@@ -67,7 +62,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ imageSrc, alt, width, height })
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-   
+          
+                {navigation.map((item) => renderNavigationItem(item))}
+              
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -82,9 +79,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ imageSrc, alt, width, height })
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Salud Interior</span>
                 <Image
-                  alt=""
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
+                  alt={alt}
+                  src={imageSrc}
+                  width= {width}
+                  height= {height}
                 />
               </a>
               <button
@@ -114,7 +112,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ imageSrc, alt, width, height })
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Iniciar
+                    Iniciar Sesión
                   </a>
                 </div>
               </div>

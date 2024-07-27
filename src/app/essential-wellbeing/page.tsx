@@ -2,7 +2,7 @@ import MobileMenu from '../../components/A-MobileMenu.js'
 
 import Contact from '../../components/H-Contact.js';
 import Team from '../../components/I-Team.js';
-import Content from '../../components/J-Content.js';
+import Content from '../../components/J-Content';
 
 
 export default function HealthBalance() {

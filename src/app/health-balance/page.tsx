@@ -1,12 +1,16 @@
-import MobileMenu from '../../components/A-MobileMenu.js'
+import MobileMenu from '../../components/A-MobileMenu'
 import Team from '../../components/I-Team.js';
-import Content from '../../components/J-Content.js';
+import Content from '../../components/J-Content';
 import Hero from '../../components/Ab-Hero.js';
 
 export default function HealthBalance() {
   return (
     <main >
-      <MobileMenu/>
+      <MobileMenu
+              imageSrc="/bear.png"
+              alt="Bear Logo"
+              width = { 80 }
+              height = { 80 }/>
       <Hero/>
       <Content/>
         <Team/>
