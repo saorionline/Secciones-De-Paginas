@@ -27,7 +27,7 @@ export default function HealthBalance() {
           },    
           {
             name: 'Maria',
-            role: 'CEO',
+            role: 'CTO',
             imageSrc: {
               imagePath: '/assets/team_player2.png',
               width: 80, 
