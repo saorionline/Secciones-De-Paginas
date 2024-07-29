@@ -1,6 +1,6 @@
 import MobileMenu from '../../components/A-MobileMenu'
 
-import Content from '../../components/J-Content';
+import Content, { ContentSection } from '../../components/J-Content';
 
 import Testimonials, { Doctor, Specialty  } from '../../components/F-Testimonials';
 
@@ -13,7 +13,15 @@ export default function HealthBalance() {
               width = { 80 }
               height = { 80 }
       />
-        <Content/>
+        <Content
+          contentImage = {{
+            alt: "Blog about medical solutions",
+            imageSrc: "https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9zcGl0bHxlbnwwfHwwfHx8MA%3D%3D",
+            width: 680,
+            height: 882,
+          }}
+          section = { ContentSection.Second_Sect_Fisrt_Parr }
+        />
         <Testimonials
         alt="Testimonial" 
         image1="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" 

@@ -18,13 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='relative isolate overflow-hidden bg-gray-200 py-4 sm:py-6 lg:py-8'>
+        <div className='relative isolate overflow-hidden bg-gray-200 '>
           <Image
               alt="Transistor"
               src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="mt-4 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              width={138}
+              height={38}
+              className="mt-4 mb-4 col-span-2 max-h-8 w-full object-contain lg:col-span-1"
             />
         </div>
         {children}

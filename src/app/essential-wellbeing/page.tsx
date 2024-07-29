@@ -36,11 +36,11 @@ export default function HealthBalance() {
           }  
         ]}/>
         <Content 
-          image= {{
+          contentImage= {{
             alt:"",
-            imageSrc:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            width: 80,
-            height: 80,
+            imageSrc:"https://images.unsplash.com/photo-1599045118108-bf9954418b76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvc3BpdGx8ZW58MHx8MHx8fDA%3D",
+            width: 980,
+            height: 980,
         }}
         section={ContentSection.First_Parr}
         />
