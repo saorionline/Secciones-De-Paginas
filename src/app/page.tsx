@@ -6,14 +6,13 @@ import Newsletter from '../components/D-Newsletter';
 import Logo from '../components/K-Logo';
 import type { NextPage } from 'next';
 import React from 'react';
-import Image from 'react-image';
 
 interface HomeProps {
   title: string;
   image: string;
 }
 
-const HomeMe: NextPage<HomeProps> = () => {
+export default function Home (){
   return (
     <main >
       <MobileMenu 
@@ -37,4 +36,4 @@ const HomeMe: NextPage<HomeProps> = () => {
     </main>
   )
 }
-export default HomeMe
+
