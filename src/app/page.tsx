@@ -7,7 +7,7 @@ import Logo from '../components/K-Logo';
 import type { NextPage } from 'next';
 import React from 'react';
 
-interface HomeProps {
+interface Home {
   title: string;
   image: string;
 }
